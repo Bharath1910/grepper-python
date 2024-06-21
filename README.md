@@ -23,3 +23,48 @@ grepper = Grepper("your-grepper-api-key")
 answers = grepper.search("query")
 print(answers)
 ```
+
+python client library
+
+## Search function
+
+This function searches all answers based on a query.
+
+## Arguements required
+
+1. query (str, optional): Query to search through answer titles.
+2. similarity (Optional[int], optional): How similar the query has to be to the answer title. 1-100 where 1 is really loose matching and 100 is really strict/tight match. Defaults to 60.
+
+## Returned value
+
+GrepperAnswer
+
+## Example of the function by using in a code:
+
+```
+import grepper_python
+
+grepper = grepper_python.Grepper("YOUR API")
+
+data = grepper.search("cat videos")
+for i in data:
+    print(i)
+```
+
+## Output
+
+```
+
+GrepperAnswer(id=667265, content='{"tags":[{"tag":"p","content":"Get back to work"}]}', 
+
+author_name='Smyth Family', 
+
+author_profile_url='https://www.grepper.com/profile/smyth-family',
+
+ title='cat videos', 
+
+ upvotes=4, 
+
+ downvotes=0)
+
+```
